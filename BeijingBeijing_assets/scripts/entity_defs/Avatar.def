@@ -1,0 +1,150 @@
+<root>
+  <Volatile>
+		<position/>
+		<yaw/>
+		<pitch/>
+		<roll/>
+	</Volatile>
+
+  <Properties>
+    <isDebug>
+      <Type> UINT8 </Type>
+      <Flags> CELL_PRIVATE </Flags>
+    </isDebug>
+
+    <name>
+      <Type> UNICODE </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </name>
+
+    <authority>
+      <Type> UINT8 </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </authority>
+
+    <characterType>
+      <Type> UINT8 </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </characterType>
+
+    <ipAddr>
+      <Type> UNICODE </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </ipAddr>
+
+    <pingValue>
+      <Type> INT32 </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </pingValue>
+
+    <playerIndex>
+      <Type> INT32 </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </playerIndex>
+
+    <cameraPos>
+      <Type> VECTOR3 </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </cameraPos>
+
+    <cameraRot>
+      <Type> VECTOR3 </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </cameraRot>
+
+    <characterMoveSpeed>
+      <Type> FLOAT </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </characterMoveSpeed>
+
+    <customCmd>
+      <Type> UNICODE </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </customCmd>
+  </Properties>
+
+  <ClientMethods>
+    <onGetLipData>
+      <Arg> ARRAY <of> FLOAT </of> </Arg>
+    </onGetLipData>
+
+    <onGetVoiceData>
+      <Arg> ARRAY <of> UINT8 </of> </Arg>
+    </onGetVoiceData>
+
+    <echoPingCall>
+      <Arg> INT32 </Arg>
+    </echoPingCall>
+  </ClientMethods>
+
+  <BaseMethods>
+    <leavedFromSpace>
+    </leavedFromSpace>
+
+    <joinedInSpace>
+      <Arg> MAILBOX </Arg>
+			<Arg> MAP_ID </Arg>
+      <Arg> SPACE_KEY </Arg>
+      <Arg> INT32 </Arg>
+      <Arg> VECTOR3 </Arg>
+      <Arg> VECTOR3 </Arg>
+		</joinedInSpace>
+
+    <loginToSpace>
+      <Arg> MAP_ID </Arg>
+      <Exposed/>
+    </loginToSpace>
+
+    <logoutSpace>
+      <Arg> UINT8 </Arg>
+      <Exposed/>
+    </logoutSpace>
+
+    <logoutGame>
+      <Exposed/>
+    </logoutGame>
+
+    <pingCall>
+      <Arg> INT32 </Arg>
+      <Exposed/>
+    </pingCall>
+  </BaseMethods>
+
+  <CellMethods>
+    <cameraPosSync>
+      <Arg> VECTOR3 </Arg>
+      <Exposed/>
+    </cameraPosSync>
+
+    <cameraRotSync>
+      <Arg> VECTOR3 </Arg>
+      <Exposed/>
+    </cameraRotSync>
+
+    <characterMoveSync>
+      <Arg> FLOAT </Arg>
+      <Exposed/>
+    </characterMoveSync>
+
+    <lipDataSync>
+      <Arg> ARRAY <of> FLOAT </of> </Arg>
+      <Exposed/>
+    </lipDataSync>
+
+    <voiceChatSync>
+      <Arg> ARRAY <of> UINT8 </of> </Arg>
+      <Exposed/>
+    </voiceChatSync>
+
+    <uploadPingValue>
+      <Arg> INT32 </Arg>
+      <Exposed/>
+    </uploadPingValue>
+
+    <doCustomAction>
+      <Arg> UNICODE </Arg>
+      <Exposed/>
+    </doCustomAction>
+  </CellMethods>
+
+</root>

@@ -1,0 +1,33 @@
+<root>
+	<Properties>
+	</Properties>
+
+	<ClientMethods>
+
+		<onGameStarted>
+			<Arg> UINT8 </Arg>
+		</onGameStarted>
+
+	</ClientMethods>
+
+	<BaseMethods>
+
+		<startGame>
+			<Arg> UNICODE </Arg>
+			<Arg> UINT8 </Arg>
+			<Arg> UINT8 </Arg>
+			<Exposed/>
+		</startGame>
+
+		<logoutGame>
+			<Exposed/>
+		</logoutGame>
+
+		<onAvatarDestroy>
+		</onAvatarDestroy>
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>

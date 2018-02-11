@@ -1,0 +1,55 @@
+<root>
+  <Volatile>
+		<position/>
+		<yaw/>
+		<pitch/>
+		<roll/>
+	</Volatile>
+
+  <Properties>
+
+    <objTypeName>
+      <Type> UNICODE </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </objTypeName>
+
+    <spaceToSpawn>
+      <Type> MAILBOX </Type>
+      <Flags> BASE </Flags>
+    </spaceToSpawn>
+
+  </Properties>
+
+  <ClientMethods>
+
+    <onPickupObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+    </onPickupObj>
+
+    <onDropObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+    </onDropObj>
+
+  </ClientMethods>
+
+  <BaseMethods>
+  </BaseMethods>
+
+  <CellMethods>
+
+    <pickupObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+      <Exposed/>
+    </pickupObj>
+
+    <dropObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+      <Exposed/>
+    </dropObj>
+
+  </CellMethods>
+</root>

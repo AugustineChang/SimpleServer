@@ -1,0 +1,35 @@
+<root>
+  <DBID> UINT64 </DBID>
+  <ENTITY_ID> INT32 </ENTITY_ID>
+  <SPACE_KEY> UINT64 </SPACE_KEY>
+  <MAP_ID> UINT8 </MAP_ID>
+
+  <AvatarInfo>  FIXED_DICT
+    <Properties>
+      <isValid>
+        <Type> UINT8 </Type>
+      </isValid>
+
+      <dbid>
+        <Type> DBID </Type>
+      </dbid>
+
+      <name>
+        <Type> UNICODE  </Type>
+      </name>
+
+      <authority>
+        <Type> UINT8  </Type>
+      </authority>
+
+      <isMale>
+        <Type> UINT8 </Type>
+      </isMale>
+
+      <characterType>
+        <Type> UINT8 </Type>
+      </characterType>
+    </Properties>
+  </AvatarInfo>
+
+</root>

@@ -1,0 +1,42 @@
+<root>
+  <Volatile>
+    <position>0</position>
+    <yaw>0</yaw>
+    <pitch>0</pitch>
+  </Volatile>
+
+  <Properties>
+    <mapKey>
+			<Type> MAP_ID </Type>
+			<Flags> CELL_PRIVATE </Flags>
+			<Persistent> false </Persistent>
+		</mapKey>
+
+		<spaceKey>
+			<Type> SPACE_KEY </Type>
+			<Flags> BASE </Flags>
+			<Persistent> true </Persistent>
+		</spaceKey>
+  </Properties>
+
+  <BaseMethods>
+    <loginToSpace>
+			<Arg> MAILBOX </Arg>
+		</loginToSpace>
+
+		<logoutSpace>
+			<Arg> ENTITY_ID	</Arg>
+      <Arg> INT32	</Arg>
+		</logoutSpace>
+  </BaseMethods>
+
+  <CellMethods>
+    <onEnter>
+      <Arg> MAILBOX </Arg>
+    </onEnter>
+
+    <onLeave>
+      <Arg> ENTITY_ID	</Arg>
+    </onLeave>
+  </CellMethods>
+</root>

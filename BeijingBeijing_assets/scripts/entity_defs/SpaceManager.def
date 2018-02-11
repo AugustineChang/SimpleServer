@@ -1,0 +1,37 @@
+<root>
+  <Properties>
+	</Properties>
+
+  <BaseMethods>
+    <loginToSpace>
+      <Arg> MAP_ID </Arg>
+			<Arg> MAILBOX </Arg>
+		</loginToSpace>
+
+		<logoutSpace>
+      <Arg> MAP_ID </Arg>
+      <Arg> SPACE_KEY </Arg>
+      <Arg> ENTITY_ID	</Arg>
+  		<Arg> INT32	</Arg>
+		</logoutSpace>
+
+    <findSpace>
+      <Arg> MAP_ID </Arg>
+      <Arg> SPACE_KEY </Arg>
+		</findSpace>
+
+    <onSpaceGetCell>
+      <Arg> MAP_ID </Arg>
+      <Arg> SPACE_KEY </Arg>
+      <Arg> MAILBOX </Arg>
+    </onSpaceGetCell>
+
+    <onSpaceLoseCell>
+      <Arg> MAP_ID </Arg>
+      <Arg> SPACE_KEY </Arg>
+    </onSpaceLoseCell>
+  </BaseMethods>
+
+  <CellMethods>
+	</CellMethods>
+</root>

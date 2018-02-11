@@ -1,0 +1,143 @@
+<root>
+	<!--
+		服务端配置({assets}/res/server/kbengine.xml)
+
+		如果你需要改变引擎设置, 请在({assets}/res/server/kbengine.xml)中覆盖kbe/res/server/kbengine_defs.xml的对应参数来修改,
+		这样的好处是不会破坏引擎的默认设置，在你更新引擎时也不会产生冲突，以及在多个逻辑项目时不会影响到其他的项目设置。
+		详细说明请参考：http://kbengine.org/cn/docs/configuration/kbengine.html
+	-->
+	<gameUpdateHertz> 25 </gameUpdateHertz>
+	<bitsPerSecondToClient> 81920000 </bitsPerSecondToClient>
+
+	<trace_packet>
+		<debug_type> 0 </debug_type>
+	</trace_packet>
+
+	<publish>
+		<!-- 发布状态, 可在脚本中获取该值。 KBEngine.publish()
+			(apps released state, This value can be obtained in the script. KBEngine.publish())
+			Type: Integer8
+			0 : debug
+			1 : release
+			其他自定义(Other custom)
+		-->
+		<state> 0 </state>
+
+		<!-- 脚本层发布的版本号
+			(Script layer released version number)
+		 -->
+		<script_version> 0.1.0 </script_version>
+	</publish>
+
+	<channelCommon>
+		<!-- 最后一次通信时间超过此时间则被认定为超时通道， 服务器将踢出该通道
+			(If long (configurable value) no communication, channel will be kicked out of the server.)
+		-->
+		<timeout>
+			<internal> 60.0 </internal>
+			<external> 60.0 </external>
+		</timeout>
+
+		<!-- socket读写缓冲大小
+			(socket send/recv buffer size)
+		-->
+		<readBufferSize>
+			<internal>	16777216	</internal> 			<!-- 16M -->
+			<external>	0			</external>				<!-- 系统默认(system default) -->
+		</readBufferSize>
+		<writeBufferSize>
+			<internal>	16777216	</internal>				<!-- 16M -->
+			<external>	0			</external>				<!-- 系统默认(system default) -->
+		</writeBufferSize>
+
+		<!-- 发送与接收窗口溢出值，0无限制
+			(the value of the send/receive window overflow, 0 is unlimited)
+		-->
+		<windowOverflow>
+			<send>
+				<!-- 一个tick内发送的字节数溢出限制
+					(A tick, the value of the sent window overflow, 0 is unlimited)
+				-->
+				<tickSentBytes>
+					<internal>	0			</internal>
+					<external>	0			</external>
+				</tickSentBytes>
+				<messages>
+					<critical>	1024		</critical>
+					<internal>	65535		</internal>
+					<external>	512		</external>
+				</messages>
+				<bytes>
+					<internal>	0			</internal>
+					<external>	1048576	</external>
+				</bytes>
+			</send>
+
+			<receive>
+				<messages>
+					<critical>	768			</critical>
+					<internal>	65535		</internal>
+					<external>	1024		</external>
+				</messages>
+				<bytes>
+					<internal>	0			</internal>
+					<external>	65535	</external>
+				</bytes>
+			</receive>
+		</windowOverflow>
+
+		<!-- 加密通信，只对外部通道
+			(Encrypted communication, channel-external only)
+
+			可选择的加密方式(Optional encryption):
+				0: 无加密(No Encryption)
+				1: Blowfish
+				2: RSA (res\key\kbengine_private.key)
+		 -->
+		<encrypt_type> 1 </encrypt_type>
+	</channelCommon>
+
+	<!-- defined => kbe/res/server/kbengine_defs.xml -->
+	<dbmgr>
+		<account_system>
+			<!-- 账号找回密码相关
+				(Account reset password)
+			-->
+			<account_resetPassword>
+				<!-- 是否开放重设密码
+					(Whether open reset password)
+				-->
+				<enable>	true	</enable>
+			</account_resetPassword>
+
+			<!-- 账号注册相关
+				(Account registration)
+			-->
+			<account_registration>
+				<!-- 是否开放注册
+					(Whether open registration)
+				-->
+				<enable>	true	</enable>
+
+				<!-- 登录合法时游戏数据库找不到游戏账号则自动创建
+					(When logged in, the game database can not find the game account is automatically created)
+				-->
+				<loginAutoCreate> true </loginAutoCreate>
+			</account_registration>
+		</account_system>
+
+		<databaseInterfaces>
+			<default>
+				<host> localhost </host>
+				<databaseName> kbe </databaseName>
+			</default>
+		</databaseInterfaces>
+
+		<ip>localhost</ip>
+		<port>3306</port>
+	</dbmgr>
+
+	<baseapp>
+		<backupPeriod> 500 </backupPeriod>
+	</baseapp>
+</root>

@@ -1,0 +1,99 @@
+<root>
+  <Volatile>
+    <position/>
+    <yaw/>
+    <pitch/>
+  </Volatile>
+
+  <Properties>
+
+    <isDebug>
+      <Type> UINT8 </Type>
+      <Flags> CELL_PRIVATE </Flags>
+    </isDebug>
+
+    <isLeft>
+      <Type> UINT8 </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </isLeft>
+
+    <avatarEntityID>
+      <Type> ENTITY_ID </Type>
+      <Flags> ALL_CLIENTS </Flags>
+    </avatarEntityID>
+
+    <triggerState>
+      <Type> UINT8 </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </triggerState>
+
+    <gripState>
+      <Type> UINT8 </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </gripState>
+
+    <thumbstickAxis>
+      <Type> FLOAT </Type>
+      <Flags> OTHER_CLIENTS </Flags>
+    </thumbstickAxis>
+
+  </Properties>
+
+  <ClientMethods>
+
+    <onGetLaserState>
+      <Arg> UINT8 </Arg>
+    </onGetLaserState>
+
+    <onGetGrabState>
+      <Arg> UINT8 </Arg>
+    </onGetGrabState>
+
+  </ClientMethods>
+
+  <BaseMethods>
+    <createHandCell>
+      <Arg> MAILBOX </Arg>
+      <Arg> VECTOR3 </Arg>
+      <Arg> VECTOR3 </Arg>
+    </createHandCell>
+
+    <destroyHand>
+      <Arg> UINT8 </Arg>
+    </destroyHand>
+  </BaseMethods>
+
+  <CellMethods>
+    <handInputSync>
+      <Arg> UINT8 </Arg>
+      <Arg> UINT8 </Arg>
+      <Exposed/>
+    </handInputSync>
+
+    <handAxisSync>
+      <Arg> UINT8 </Arg>
+      <Arg> FLOAT </Arg>
+      <Exposed/>
+    </handAxisSync>
+
+    <handLaserStateSync>
+      <Arg> UINT8 </Arg>
+      <Exposed/>
+    </handLaserStateSync>
+
+    <handGrabStateSync>
+      <Arg> UINT8 </Arg>
+      <Exposed/>
+    </handGrabStateSync>
+
+    <updateHandLocation>
+      <Arg> VECTOR3 </Arg>
+      <Exposed/>
+    </updateHandLocation>
+
+    <updateHandDirection>
+      <Arg> VECTOR3 </Arg>
+      <Exposed/>
+    </updateHandDirection>
+  </CellMethods>
+</root>
