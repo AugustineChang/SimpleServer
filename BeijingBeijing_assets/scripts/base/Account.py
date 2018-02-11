@@ -69,10 +69,10 @@ class Account(KBEngine.Proxy):
 	def startGame(self, name , auth , charType):
 		if self.activeAvatar is None:
 			avatarDic = { "name":name, "authority":auth, "characterType":charType, "isDebug":0}
-			KBEngine.createBaseAnywhere("Avatar", avatarDic, self.onGameStarted)
+			KBEngine.createEntityAnywhere("Avatar", avatarDic, self.onGameStarted)
 			##############################
 			debugAvatarDic = { "name":"DebugAvatar", "authority":0, "characterType":0 , "isDebug":1}
-			self.debugAvatar = KBEngine.createBaseLocally("Avatar" , debugAvatarDic)
+			self.debugAvatar = KBEngine.createEntityLocally("Avatar" , debugAvatarDic)
 			##############################
 		else:
 			self.client.onGameStarted(0)

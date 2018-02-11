@@ -27,7 +27,7 @@ class SpaceManager( KBEngine.Entity ):
 
         context = copy.copy(context)
         spaceData = d_Maps.Maps.get(mapKey)
-        KBEngine.createBaseAnywhere( spaceData["entityType"], \
+        KBEngine.createEntityAnywhere( spaceData["entityType"], \
         {"mapKey":mapKey, "spaceKey":spaceKey, "context":context})
 
     def loginToSpace(self, mapKey, avatarEntity):

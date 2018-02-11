@@ -14,8 +14,8 @@ def onBaseAppReady(isBootstrap):
 	 (isBootstrap, os.getenv("KBE_COMPONENTID"), os.getenv("KBE_BOOTIDX_GROUP"), os.getenv("KBE_BOOTIDX_GLOBAL")))
 
 	if isBootstrap:
-		KBEngine.createBaseLocally( "SpaceManager", {} )
-	
+		KBEngine.createEntityLocally( "SpaceManager", {} )
+
 def onReadyForLogin(isBootstrap):
 	"""
 	KBEngine method.
