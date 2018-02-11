@@ -21,7 +21,7 @@
 
   <BaseMethods>
     <loginToSpace>
-			<Arg> MAILBOX </Arg>
+			<Arg> ENTITYCALL </Arg>
 		</loginToSpace>
 
 		<logoutSpace>
@@ -32,7 +32,7 @@
 
   <CellMethods>
     <onEnter>
-      <Arg> MAILBOX </Arg>
+      <Arg> ENTITYCALL </Arg>
     </onEnter>
 
     <onLeave>

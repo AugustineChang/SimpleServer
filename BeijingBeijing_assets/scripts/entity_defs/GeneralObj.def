@@ -14,7 +14,7 @@
     </objTypeName>
 
     <spaceToSpawn>
-      <Type> MAILBOX </Type>
+      <Type> ENTITYCALL </Type>
       <Flags> BASE </Flags>
     </spaceToSpawn>
 

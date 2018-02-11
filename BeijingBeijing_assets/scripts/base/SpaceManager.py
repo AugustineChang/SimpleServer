@@ -4,10 +4,10 @@ import ConstDefine
 import d_Maps
 from KBEDebug import *
 
-class SpaceManager( KBEngine.Base ):
+class SpaceManager( KBEngine.Entity ):
 
     def __init__(self):
-        KBEngine.Base.__init__(self)
+        KBEngine.Entity.__init__(self)
         self.spaces = {}
         self.tempMapKey = list(d_Maps.Maps.keys())
         self.addTimer(1,1,ConstDefine.TIMER_TYPE_CREATE_SPACES)
