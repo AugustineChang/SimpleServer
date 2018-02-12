@@ -5,7 +5,7 @@
   <BaseMethods>
     <loginToSpace>
       <Arg> MAP_ID </Arg>
-			<Arg> ENTITYCALL </Arg>
+			<Arg> MAILBOX </Arg>
 		</loginToSpace>
 
 		<logoutSpace>
@@ -23,7 +23,7 @@
     <onSpaceGetCell>
       <Arg> MAP_ID </Arg>
       <Arg> SPACE_KEY </Arg>
-      <Arg> ENTITYCALL </Arg>
+      <Arg> MAILBOX </Arg>
     </onSpaceGetCell>
 
     <onSpaceLoseCell>

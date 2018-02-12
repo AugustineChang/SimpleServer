@@ -1,9 +1,9 @@
 import KBEngine
 from KBEDebug import *
 
-class GeneralObj( KBEngine.Entity ):
+class GeneralObj( KBEngine.Base ):
     def __init__(self):
-        KBEngine.Entity.__init__(self)
+        KBEngine.Base.__init__(self)
         DEBUG_MSG("GeneralObj createBase %i" % self.id)
         self.createCellEntity(self.spaceToSpawn)
 

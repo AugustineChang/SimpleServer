@@ -1,10 +1,10 @@
 import KBEngine
 from KBEDebug import *
 
-class Hand( KBEngine.Entity ):
+class Hand( KBEngine.Base ):
 
     def __init__(self):
-        KBEngine.Entity.__init__(self)
+        KBEngine.Base.__init__(self)
         self.hasCell = False
         self.isLeaveGame = False
         DEBUG_MSG("Hand createBase %i" % self.id)

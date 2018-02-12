@@ -4,11 +4,11 @@ import d_MapObjs
 import ConstDefine
 from KBEDebug import *
 
-class Space(KBEngine.Entity):
+class Space(KBEngine.Base):
 
     def __init__(self):
-        KBEngine.Entity.__init__(self)
-        self.createCellEntityInNewSpace(None)
+        KBEngine.Base.__init__(self)
+        self.createInNewSpace(None)
 
         self.mapKey = self.cellData["mapKey"]
         self.mapName = d_Maps.Maps.get(self.mapKey)["mapName"]

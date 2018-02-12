@@ -53,7 +53,7 @@
 
   <BaseMethods>
     <createHandCell>
-      <Arg> ENTITYCALL </Arg>
+      <Arg> MAILBOX </Arg>
       <Arg> VECTOR3 </Arg>
       <Arg> VECTOR3 </Arg>
     </createHandCell>

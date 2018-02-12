@@ -82,7 +82,7 @@
     </leavedFromSpace>
 
     <joinedInSpace>
-      <Arg> ENTITYCALL </Arg>
+      <Arg> MAILBOX </Arg>
 			<Arg> MAP_ID </Arg>
       <Arg> SPACE_KEY </Arg>
       <Arg> INT32 </Arg>
