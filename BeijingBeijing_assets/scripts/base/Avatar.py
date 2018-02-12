@@ -18,8 +18,8 @@ class Avatar(KBEngine.Proxy):
 
     def onTimer(self, tid, userArg):
         if ConstDefine.TIMER_TYPE_CREATE_HANDS == userArg:
-            self.leftHand = KBEngine.createEntityLocally("Hand",{"isLeft":1, "avatarEntityID":self.id, "isDebug":self.isDebug})
-            self.rightHand = KBEngine.createEntityLocally("Hand",{"isLeft":0, "avatarEntityID":self.id, "isDebug":self.isDebug})
+            self.leftHand = KBEngine.createBaseLocally("Hand",{"isLeft":1, "avatarEntityID":self.id, "isDebug":self.isDebug})
+            self.rightHand = KBEngine.createBaseLocally("Hand",{"isLeft":0, "avatarEntityID":self.id, "isDebug":self.isDebug})
             self.delTimer(tid)
 
             if self.WaitForHands != None:

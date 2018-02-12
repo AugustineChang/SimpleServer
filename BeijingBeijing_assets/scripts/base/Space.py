@@ -32,7 +32,7 @@ class Space(KBEngine.Entity):
         if len(self.tempObjsList) > 0:
             objData = self.tempObjsList.pop(0)
             objData['spaceToSpawn'] = self.cell
-            KBEngine.createEntityAnywhere( "GeneralObj", objData )
+            KBEngine.createBaseAnywhere( "GeneralObj", objData )
         else:
             del self.tempObjsList
             self.delTimer(tid)
@@ -54,7 +54,7 @@ class Space(KBEngine.Entity):
 
     def debugSpawn(self):
         dic = { "name":"Debug", "isMale":0, "characterType":0, "clothesType":0, "hairType":0, "glassesType":0, "position": ( 8.0, 0.5, -1.0) }
-        KBEngine.createEntityAnywhere("Avatar", dic, self.onCreateDebugAvatar)
+        KBEngine.createBaseAnywhere("Avatar", dic, self.onCreateDebugAvatar)
 
     def onCreateDebugAvatar(self, avatar):
         self.addTimer(2, 1, ConstDefine.TIMER_TYPE_TEST_NEAROBJ)
