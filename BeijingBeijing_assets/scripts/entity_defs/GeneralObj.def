@@ -25,12 +25,28 @@
     <onPickupObj>
       <Arg> ENTITY_ID </Arg>
       <Arg> UINT8 </Arg>
+      <Arg> VECTOR3 </Arg>
     </onPickupObj>
 
     <onDropObj>
       <Arg> ENTITY_ID </Arg>
       <Arg> UINT8 </Arg>
     </onDropObj>
+
+    <onDropObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+    </onDropObj>
+
+    <onProximityObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+    </onProximityObj>
+
+    <onLeaveObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+    </onLeaveObj>
 
   </ClientMethods>
 
@@ -42,6 +58,7 @@
     <pickupObj>
       <Arg> ENTITY_ID </Arg>
       <Arg> UINT8 </Arg>
+      <Arg> VECTOR3 </Arg>
       <Exposed/>
     </pickupObj>
 
@@ -50,6 +67,16 @@
       <Arg> UINT8 </Arg>
       <Exposed/>
     </dropObj>
+
+    <proximityObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+    </proximityObj>
+
+    <leaveObj>
+      <Arg> ENTITY_ID </Arg>
+      <Arg> UINT8 </Arg>
+    </leaveObj>
 
   </CellMethods>
 </root>

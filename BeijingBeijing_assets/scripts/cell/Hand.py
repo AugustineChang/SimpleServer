@@ -8,9 +8,9 @@ class Hand( KBEngine.Entity ):
         DEBUG_MSG("Hand createCell %i" % self.id)
 
         ####################################################
-        if self.isDebug == 1:
-            dataName = "DebugHand" + str(self.isLeft)
-            KBEngine.globalData[dataName] = self
+        #if self.isDebug == 1:
+        #    dataName = "DebugHand" + str(self.isLeft)
+        #    KBEngine.globalData[dataName] = self
         ####################################################
 
     def handInputSync(self, callerEntityID, key, value):
@@ -22,54 +22,54 @@ class Hand( KBEngine.Entity ):
             self.gripState = value
 
         #####################################
-        if self.isDebug == 0:
-            dataName = "DebugHand" + str(self.isLeft)
-            if KBEngine.globalData.has_key(dataName):
-                debugHand = KBEngine.globalData[dataName]
-                debugHand.handInputSync(callerEntityID,key,value)
+        #if self.isDebug == 0:
+        #    dataName = "DebugHand" + str(self.isLeft)
+        #    if KBEngine.globalData.has_key(dataName):
+        #        debugHand = KBEngine.globalData[dataName]
+        #        debugHand.handInputSync(callerEntityID,key,value)
 
     def handAxisSync(self, callerEntityID, key, value):
         if key == 2:
             self.thumbstickAxis = value
         #####################################
-        if self.isDebug == 0:
-            dataName = "DebugHand" + str(self.isLeft)
-            if KBEngine.globalData.has_key(dataName):
-                debugHand = KBEngine.globalData[dataName]
-                debugHand.handAxisSync(callerEntityID,key,value)
+        #if self.isDebug == 0:
+        #    dataName = "DebugHand" + str(self.isLeft)
+        #    if KBEngine.globalData.has_key(dataName):
+        #        debugHand = KBEngine.globalData[dataName]
+        #        debugHand.handAxisSync(callerEntityID,key,value)
 
     def handLaserStateSync(self, callerEntityID, laser):
         self.otherClients.onGetLaserState(laser)
         #####################################
-        if self.isDebug == 0:
-            dataName = "DebugHand" + str(self.isLeft)
-            if KBEngine.globalData.has_key(dataName):
-                debugHand = KBEngine.globalData[dataName]
-                debugHand.handLaserStateSync(callerEntityID,laser)
+        #if self.isDebug == 0:
+        #    dataName = "DebugHand" + str(self.isLeft)
+        #    if KBEngine.globalData.has_key(dataName):
+        #        debugHand = KBEngine.globalData[dataName]
+        #        debugHand.handLaserStateSync(callerEntityID,laser)
 
     def handGrabStateSync(self, callerEntityID, grab):
         self.otherClients.onGetGrabState(grab)
         #####################################
-        if self.isDebug == 0:
-            dataName = "DebugHand" + str(self.isLeft)
-            if KBEngine.globalData.has_key(dataName):
-                debugHand = KBEngine.globalData[dataName]
-                debugHand.handGrabStateSync(callerEntityID,grab)
+        #if self.isDebug == 0:
+        #    dataName = "DebugHand" + str(self.isLeft)
+        #    if KBEngine.globalData.has_key(dataName):
+        #        debugHand = KBEngine.globalData[dataName]
+        #        debugHand.handGrabStateSync(callerEntityID,grab)
 
     def updateHandLocation(self, callerEntityID, pos):
         self.position = pos
         #####################################
-        if self.isDebug == 0:
-            dataName = "DebugHand" + str(self.isLeft)
-            if KBEngine.globalData.has_key(dataName):
-                debugHand = KBEngine.globalData[dataName]
-                debugHand.updateHandLocation(callerEntityID,pos)
+        #if self.isDebug == 0:
+        #    dataName = "DebugHand" + str(self.isLeft)
+        #    if KBEngine.globalData.has_key(dataName):
+        #        debugHand = KBEngine.globalData[dataName]
+        #        debugHand.updateHandLocation(callerEntityID,pos)
 
     def updateHandDirection(self, callerEntityID, rot):
         self.direction = rot
         #####################################
-        if self.isDebug == 0:
-            dataName = "DebugHand" + str(self.isLeft)
-            if KBEngine.globalData.has_key(dataName):
-                debugHand = KBEngine.globalData[dataName]
-                debugHand.updateHandDirection(callerEntityID,rot)
+        #if self.isDebug == 0:
+        #    dataName = "DebugHand" + str(self.isLeft)
+        #    if KBEngine.globalData.has_key(dataName):
+        #        debugHand = KBEngine.globalData[dataName]
+        #        debugHand.updateHandDirection(callerEntityID,rot)

@@ -15,11 +15,11 @@ class Account(KBEngine.Proxy):
 		@param id		: addTimer 的返回值ID
 		@param userArg	: addTimer 最后一个参数所给入的数据
 		"""
-		#pass
+		pass
 		#DEBUG_MSG(id, userArg)
-		if userArg == ConstDefine.TIMER_TYPE_AUTO_LOGIN:
-			self.debugAvatar.loginToSpace(1)
-			self.delTimer(id)
+		#if userArg == ConstDefine.TIMER_TYPE_AUTO_LOGIN:
+		#	self.debugAvatar.loginToSpace(1)
+		#	self.delTimer(id)
 
 	def onEntitiesEnabled(self):
 		"""
@@ -71,8 +71,8 @@ class Account(KBEngine.Proxy):
 			avatarDic = { "name":name, "authority":auth, "characterType":charType, "isDebug":0}
 			KBEngine.createBaseAnywhere("Avatar", avatarDic, self.onGameStarted)
 			##############################
-			debugAvatarDic = { "name":"DebugAvatar", "authority":0, "characterType":0 , "isDebug":1}
-			self.debugAvatar = KBEngine.createBaseLocally("Avatar" , debugAvatarDic)
+			#debugAvatarDic = { "name":"DebugAvatar", "authority":0, "characterType":0 , "isDebug":1}
+			#self.debugAvatar = KBEngine.createBaseLocally("Avatar" , debugAvatarDic)
 			##############################
 		else:
 			self.client.onGameStarted(0)
@@ -86,18 +86,18 @@ class Account(KBEngine.Proxy):
 			self.client.onGameStarted(1)
 			self.giveClientTo(self.activeAvatar)
 			####################################
-			self.addTimer(2,1,ConstDefine.TIMER_TYPE_AUTO_LOGIN)
+			#self.addTimer(2,1,ConstDefine.TIMER_TYPE_AUTO_LOGIN)
 			####################################
 
 	def onAvatarDestroy(self):
-		if KBEngine.globalData.has_key("DebugAvatar"):
-			del KBEngine.globalData["DebugAvatar"]
+		#if KBEngine.globalData.has_key("DebugAvatar"):
+		#	del KBEngine.globalData["DebugAvatar"]
 
-		if KBEngine.globalData.has_key("DebugHand0"):
-			del KBEngine.globalData["DebugHand0"]
+		#if KBEngine.globalData.has_key("DebugHand0"):
+		#	del KBEngine.globalData["DebugHand0"]
 
-		if KBEngine.globalData.has_key("DebugHand1"):
-			del KBEngine.globalData["DebugHand1"]
+		#if KBEngine.globalData.has_key("DebugHand1"):
+		#	del KBEngine.globalData["DebugHand1"]
 
-		self.debugAvatar.logoutSpace(True)
+		#self.debugAvatar.logoutSpace(True)
 		self.destroy()
